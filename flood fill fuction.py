@@ -10,7 +10,7 @@ board = [
     "....#............###..",
     "....##############....",
 ]
-
+# flood fill function
 def flood_fill(input_board: List[str], old: str, new: str, x: int, y: int) -> List[str]:
     def fill(x, y):
         if x < 0 or x >= len(input_board) or y < 0 or y >= len(input_board[0]):
@@ -25,8 +25,8 @@ def flood_fill(input_board: List[str], old: str, new: str, x: int, y: int) -> Li
 
     fill(x, y)
     return input_board
-
+# perform flood fill
 modified_board = flood_fill(input_board=board, old=".", new="~", x=5, y=12)
-
+# print result
 for row in modified_board:
     print(row)
